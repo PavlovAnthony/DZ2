@@ -4,7 +4,7 @@
 782 -> 8
 918 -> 1 */
 //проверка вводится ли число
-int CheckNumber(int c)
+int CheckNumber()
 {
     string x = Console.ReadLine();
     Int32 num;
@@ -15,23 +15,22 @@ int CheckNumber(int c)
         Environment.Exit(0);
     }
 
-    if (Math.Abs(num) / Math.Pow(10, c - 1) < 1)
+    if (Math.Abs(num) /100  < 1)
     {
-        Console.WriteLine("в числе меньше " + c + " цифр");
+        Console.WriteLine("в числе меньше 3 цифр");
         Environment.Exit(0);
     }
     return Math.Abs(num);
 }
 
-int FindSecondNum(Int32 number, int c)
+int FindSecondNum(Int32 number)
 {
 
-    while (number >= Math.Pow(10, c)) number /= 10;
+    while (number >= 100) number /= 10;
     int d = number % 10;
     return Math.Abs(d);
 
 }
 //какую по порядку цифру выводить
-int b = 2;
 Console.WriteLine("Введите  число:");
-Console.WriteLine(FindSecondNum(CheckNumber(b), b));
+Console.WriteLine(FindSecondNum(CheckNumber()));
