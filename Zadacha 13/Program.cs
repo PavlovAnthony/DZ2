@@ -34,7 +34,7 @@ int FindSecondNum(Int32 number, int c)
 
 }
 //какую по порядку цифру выводить (3)
-int b = 5;
+int b = 3;
 Console.WriteLine("Введите  число:");
 
 Console.WriteLine(FindSecondNum(CheckNumber(b), b));
